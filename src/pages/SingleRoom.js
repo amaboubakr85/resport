@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import Banner from "../components/Banner";
-import Hero from "../components/Hero";
 import {RoomContext} from "../Context";
 import {Link} from "react-router-dom";
 import defaultBg from "../assets/images/defaultBcg.jpeg";
@@ -59,8 +58,8 @@ export default class SingleRoom extends Component {
                             <h3>info</h3>
                             <h6>price : ${price}</h6>
                             <h6>price : {size} SQFT</h6>
-                            <h6>Max Capacity : {capacity>1? `${capacity} people`:`${capacity} person`} </h6>
-                            <h6>{pets?"pets allowed ": "no pets allowed "}</h6>
+                            <h6>Max Capacity : {capacity > 1 ? `${capacity} people` : `${capacity} person`} </h6>
+                            <h6>{pets ? "pets allowed " : "no pets allowed "}</h6>
                             {/* if the breakfast true then will put "free breakfast included if false nothing will rendered "*/}
                             <h6>{breakfast && "free breakfast included"}</h6>
                         </article>
@@ -70,7 +69,7 @@ export default class SingleRoom extends Component {
                     <h6>extras</h6>
                     <ul className="extras">
                         {
-                            extras.map((extra,index)=>{
+                            extras.map((extra, index) => {
                                 return (<li key={index} className="">- {extra}</li>)
                             })
                         }
