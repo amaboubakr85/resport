@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-const Banner =({title,subtitle,children})=>{
+function Banner ({title,subtitle,children}){
 
         return (
             <div className="banner">
